@@ -56,5 +56,4 @@ INSERT INTO Athlete (nom,genre,age) VALUES
 ('John', 'M', '24'),
 ('Maria', 'F', '29');
 
-zizi
-WOAW
+
