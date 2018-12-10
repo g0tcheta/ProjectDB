@@ -50,3 +50,6 @@ medaille VARCHAR(100),
 score INT,
 temps TIME
 )
+
+INSERT INTO Athlete VALUES 
+('', '', '', ''),
