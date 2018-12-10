@@ -55,3 +55,5 @@ INSERT INTO Athlete (nom,genre,age) VALUES
 ('Steve', 'M', '25'),
 ('John', 'M', '24'),
 ('Maria', 'F', '29');
+
+zizi
