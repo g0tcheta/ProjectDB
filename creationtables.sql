@@ -51,5 +51,7 @@ score INT,
 temps TIME
 )
 
-INSERT INTO Athlete VALUES 
+INSERT INTO Athlete VALUES
 ('', '', '', ''),
+('', '', '', ''),
+('', '', '', '');
