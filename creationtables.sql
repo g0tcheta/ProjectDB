@@ -16,11 +16,13 @@ DROP TABLE IF EXISTS Date;
 CREATE TABLE Athlete
 (
 id SERIAL PRIMARY KEY,
+id_pays INT,
 FOREIGN KEY (id_pays) REFERENCES Pays(id),
 nom VARCHAR(100),
 genre VARCHAR(100),
 age INT,
-discipline VARCHAR FOREIGN KEY REFERENCES Epreuve(nom)
+discipline VARCHAR
+FOREIGN KEY (discipline) REFERENCES Epreuve(nom)
 );
 
 CREATE TABLE Pays
@@ -34,9 +36,12 @@ CREATE TABLE Epreuve
 id SERIAL PRIMARY KEY,
 nom VARCHAR(100),
 solo_multi VARCHAR(100),
-date DATE FOREIGN KEY REFERENCES Date(date),
-heure TIME FOREIGN KEY REFERENCES Date(heure),
-categorie VARCHAR FOREIGN KEY REFERENCES Categorie_Sport(id)
+date DATE,
+FOREIGN KEY (date) REFERENCES Date(date),
+heure TIME,
+FOREIGN KEY (heure) REFERENCES Date(heure),
+categorie VARCHAR,
+FOREIGN KEY (categorie) REFERENCES Categorie_Sport(id)
 );
 
 CREATE TABLE Categorie_Sport
@@ -54,8 +59,10 @@ heure TIME
 
 CREATE TABLE Resultat
 (
-epreuve VARCHAR FOREIGN KEY REFERENCES Epreuve(nom),
-gagnant VARCHAR FOREIGN KEY REFERENCES Athlete(nom),
+epreuve VARCHAR,
+FOREIGN KEY (epreuve) REFERENCES Epreuve(nom),
+gagnant VARCHAR,
+FOREIGN KEY (epreuve) REFERENCES Athlete(nom),
 medaille VARCHAR(100),
 score INT,
 temps TIME
