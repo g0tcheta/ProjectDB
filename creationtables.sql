@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS Athlete;
 CREATE TABLE Athlete
 (
-id INT PRIMARY KEY NOT NULL,
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 id_pays INT FOREIGN KEY REFERENCES Pays(id),
 nom VARCHAR(100),
 genre VARCHAR(100),
@@ -12,7 +12,7 @@ discipline VARCHAR FOREIGN KEY REFERENCES Epreuve(nom)
 DROP TABLE IF EXISTS Pays;
 CREATE TABLE Pays
 (
-id INT PRIMARY KEY NOT NULL,
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nom VARCHAR(100)
 )
 
@@ -51,7 +51,75 @@ score INT,
 temps TIME
 )
 
-INSERT INTO Athlete (nom,genre,age) VALUES
-('Steve', 'M', '25'),
-('John', 'M', '24'),
-('Maria', 'F', '29');
+
+INSERT INTO Athlete (id_pays,nom,genre,age,discipline) VALUES
+(),
+();
+
+INSERT INTO Pays (nom) VALUES -- On ne prend que les pays avec 50 ou plus athletes.
+-- AFRIQUE
+('Afrique du Sud'),
+('Algerie'),
+('Egypte'),
+('Kenya'),
+('Maroc'),
+('Nigeria'),
+('Tunisie'),
+-- AMERIQUES
+('Argentine'),
+('Bresil'),
+('Canada'),
+('Colombie'),
+('Cuba'),
+('Etats-Unis'),
+('Jamaique'),
+('Mexique'),
+('Venezuela'),
+-- ASIE
+('Chine'),
+('Coree du Sud'),
+('Inde'),
+('Iran'),
+('Israel'),
+('Japon'),
+('Kazakhstan'),
+('Ouzbékistan'),
+('Taipei Chinois'),
+('Thailande'),
+-- EUROPE
+('Allemagne'),
+('Autriche'),
+('Azerbaidjan'),
+('Belgique'),
+('Bielorussie'),
+('Bulgarie'),
+('Croatie'),
+('Danemark'),
+('Estonie'),
+('Espagne'),
+('Finlande'),
+('France'),
+('Grande Bretagne'),
+('Grece'),
+('Hongrie'),
+('Irlande'),
+('Italie'),
+('Lituanie'),
+('Norvege'),
+('Pays Bas'),
+('Pologne'),
+('Portugal'),
+('Republique tcheque'),
+('Roumanie'),
+('Russie'),
+('Serbie'),
+('Slovaquie'),
+('Slovenie'),
+('Suede'),
+('Suisse'),
+('Turquie'),
+('Ukraine'),
+-- OCEANIE
+('Australie'),
+('Fidji'),
+('Nouvelle Zelande');
