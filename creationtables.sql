@@ -38,6 +38,7 @@ nom VARCHAR(100),
 nbr_epreuve INT
 );
 
+
 CREATE TABLE Epreuve
 (
 id SERIAL PRIMARY KEY,
@@ -177,3 +178,28 @@ INSERT INTO Pays (nom) VALUES -- On ne prend que les pays avec 50 ou plus athlet
 ('Australie'),
 ('Fidji'),
 ('Nouvelle Zelande');
+
+INSERT INTO Epreuve (nom ,solo_multi,date,,categorie) VALUES --Dates pas insérées 
+('Athletisme','solo',,'Athletisme'),
+('Aviron','solo',,'Aviron'),
+('Badminton','solo/multi',,'Badminton'),
+('Basket-ball','multi',,'Basket-ball'),
+('Boxe','solo',,'Boxe'),
+('Course_en_ligne','solo/multi',,'Canoe-kayak'),
+('Slalom','solo/multi',,'Canoe-kayak'),
+('Cyclisme_sur_route','solo',,'Cyclisme'),
+('Cyclisme_sur_piste','solo',,'Cyclisme'),
+('VTT','solo',,'Cyclisme'),
+('BMX','solo',,'Cyclisme'),
+('Saut_obstacles','solo',,'Equitation'),
+('Dressage','solo','Equitation'),
+('Coucours_complet','solo',,'Equitation'),
+('Escrime','solo',,'Escrime'),
+('Football','multi',,'Football'),
+('Golf','solo',,'Golf'),
+('Gymnastique_artistique','solo',,'Gymnastique'),
+('Gymnastique_rythmique','solo',,'Gymnastique'),
+('Trampoline','solo',,'Gymnastique'),
+('Halterophilie','solo',,'Halterophilie'),
+('Handball','multi',,'Handball');
+
