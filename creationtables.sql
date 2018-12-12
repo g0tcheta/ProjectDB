@@ -53,12 +53,14 @@ nbr_epreuve INT
 
 CREATE TABLE Date
 (
+id SERIAL PRIMARY KEY,
 date DATE,
 heure TIME
 );
 
 CREATE TABLE Resultat
 (
+id SERIAL PRIMARY KEY, 
 epreuve VARCHAR,
 FOREIGN KEY (epreuve) REFERENCES Epreuve(nom),
 gagnant VARCHAR,
