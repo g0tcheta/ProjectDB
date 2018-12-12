@@ -21,7 +21,7 @@ FOREIGN KEY (id_pays) REFERENCES Pays(id),
 nom VARCHAR(100),
 genre VARCHAR(100),
 age INT,
-discipline VARCHAR
+discipline VARCHAR(100),
 FOREIGN KEY (discipline) REFERENCES Epreuve(nom)
 );
 
@@ -29,6 +29,13 @@ CREATE TABLE Pays
 (
 id SERIAL PRIMARY KEY,
 nom VARCHAR(100)
+);
+
+CREATE TABLE Categorie_Sport
+(
+id SERIAL PRIMARY KEY,
+nom VARCHAR(100),
+nbr_epreuve INT
 );
 
 CREATE TABLE Epreuve
@@ -40,15 +47,20 @@ date DATE,
 FOREIGN KEY (date) REFERENCES Date(date),
 heure TIME,
 FOREIGN KEY (heure) REFERENCES Date(heure),
-categorie VARCHAR,
+categorie VARCHAR(100),
 FOREIGN KEY (categorie) REFERENCES Categorie_Sport(id)
 );
 
-CREATE TABLE Categorie_Sport
+CREATE TABLE Resultat
 (
 id SERIAL PRIMARY KEY,
-nom VARCHAR(100),
-nbr_epreuve INT
+epreuve VARCHAR(100),
+FOREIGN KEY (epreuve) REFERENCES Epreuve(nom),
+gagnant VARCHAR(100),
+FOREIGN KEY (epreuve) REFERENCES Athlete(nom),
+medaille VARCHAR(100),
+score INT,
+temps TIME
 );
 
 CREATE TABLE Date
@@ -56,18 +68,6 @@ CREATE TABLE Date
 id SERIAL PRIMARY KEY,
 date DATE,
 heure TIME
-);
-
-CREATE TABLE Resultat
-(
-id SERIAL PRIMARY KEY, 
-epreuve VARCHAR,
-FOREIGN KEY (epreuve) REFERENCES Epreuve(nom),
-gagnant VARCHAR,
-FOREIGN KEY (epreuve) REFERENCES Athlete(nom),
-medaille VARCHAR(100),
-score INT,
-temps TIME
 );
 
 
