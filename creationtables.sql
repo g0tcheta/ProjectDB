@@ -68,8 +68,7 @@ temps TIME
 
 
 INSERT INTO Athlete (id_pays,nom,genre,age,discipline) VALUES
-(),
-();
+(1,'Bob','M',38,'Athletisme');
 
 INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
 ('Athletisme',1),
