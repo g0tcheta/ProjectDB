@@ -7,14 +7,14 @@ nom VARCHAR(100),
 genre VARCHAR(100),
 age INT,
 discipline VARCHAR FOREIGN KEY REFERENCES Epreuve(nom)
-)
+);
 
 DROP TABLE IF EXISTS Pays;
 CREATE TABLE Pays
 (
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nom VARCHAR(100)
-)
+);
 
 DROP TABLE IF EXISTS Epreuve;
 CREATE TABLE Epreuve
@@ -25,21 +25,22 @@ solo_multi VARCHAR(100),
 date DATE FOREIGN KEY REFERENCES Date(date),
 heure TIME FOREIGN KEY REFERENCES Date(heure),
 categorie VARCHAR FOREIGN KEY REFERENCES Categorie_Sport(id)
-)
+);
 
 DROP TABLE IF EXISTS Categorie_Sport;
 CREATE TABLE Categorie_Sport
 (
-id INT PRIMARY KEY NOT NULL,
-Nbr_epreuve INT
-)
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nom VARCHAR(100),
+nbr_epreuve INT
+);
 
 DROP TABLE IF EXISTS Date;
 CREATE TABLE Date
 (
 date DATE,
 heure TIME
-)
+);
 
 DROP TABLE IF EXISTS Resultat;
 CREATE TABLE Resultat
@@ -49,12 +50,43 @@ gagnant VARCHAR FOREIGN KEY REFERENCES Athlete(nom),
 medaille VARCHAR(100),
 score INT,
 temps TIME
-)
+);
 
 
 INSERT INTO Athlete (id_pays,nom,genre,age,discipline) VALUES
 (),
 ();
+
+INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
+('Athletisme',1),
+('Aviron',1),
+('Badminton',1),
+('Basket-ball',1),
+('Boxe',1),
+('Canoe-kayak',2),
+('Cyclisme',4),
+('Equitation',3),
+('Escrime',1),
+('Football',1),
+('Golf',1),
+('Gymnastique',3),
+('Halterophilie',1),
+('Handball',1),
+('Hockey sur gazon',1),
+('Judo',1),
+('Lutte',2),
+('Sports aquatique',4),
+('Pentathlon moderne',1),
+('Rugby a sept',1),
+('Taekwondo',1),
+('Tennis',1),
+('Tennis de table',1),
+('Tir',3),
+('Tir a larc',1),
+('Triathlon',1),
+('Voile',1),
+('Volley-ball',2);
+
 
 INSERT INTO Pays (nom) VALUES -- On ne prend que les pays avec 50 ou plus athletes.
 -- AFRIQUE
