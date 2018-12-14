@@ -1,3 +1,3 @@
 CREATE TABLE Test;
-Mmpmpmpmpmpmpmpmpmpmpmpmpmp
-Mmpmpmpmpmpmpmpmpmpmpmpmpmp
+
+C'est Zgloubiboulba
