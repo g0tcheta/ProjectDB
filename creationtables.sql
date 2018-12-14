@@ -111,6 +111,11 @@ INSERT INTO Athlete (iso_pays,nom,genre,age,discipline) VALUES
 ('JPN','Nozomi Okuhara','F',23,'Badminton'),
 ('SRB','Sasa Cado','F',29,'Basket-ball'),
 ('ESP','Sergio Rodiguez',32,'Basket-ball'),
+('UZB','Hasanboy Dusmatov','M',25,'Boxe'),
+('FIN','Mira Potkonen','F',38,'Boxe'),
+('UKR','Yuriy Cheban','M',32,'Canoe-kayak'),
+('BRA','Isaquias Queiroz','M',24,'Canoe-kayak'),
+('NZL','Lisa Carrington','F',39,'Canoe-kayak'),
 
 
 
