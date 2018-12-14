@@ -116,10 +116,26 @@ INSERT INTO Athlete (iso_pays,nom,genre,age,discipline) VALUES
 ('UKR','Yuriy Cheban','M',32,'Canoe-kayak'),
 ('BRA','Isaquias Queiroz','M',24,'Canoe-kayak'),
 ('NZL','Lisa Carrington','F',39,'Canoe-kayak'),
-
-
-
-
+('GBR','Jason Kenny','M',30,'Cyclisme'),
+('GER','Kristina Vogel','F',28,'Cyclisme'),
+('DNk','Jakob Diemer Fuglsang','M',33,'Cyclisme'),
+('SWE','Emma Johansson','F',35,'Cyclisme'),
+('GBR','Charlotte Dujardin','F',33,'Equitation'),
+('DEU','Isabell Werth','F',49,'Equitation'),
+('FRA','Yannick Borel,'M',30,'Escrime'),
+('KOR','Park Sang-young','M',23,'Escrime'),
+('RUS','Yana Egorian','F',24,'Escrime'),
+('TUN','Ines Boubakri','F',29,'Escrime'),
+('BRA','Fernando Prass','M',40,'Football'),
+('BRA','Neymar','M',26,'Football'),
+('CAN','Ashley Lawrence','F',23,'Football'),
+('CAN','Stephanie Labbe','F',32,'Football'),
+('BEL','Nicolas Colsaerts','M',36,'Golf'),
+('ARG','Emiliano Grillo','M',26,'Golf'),
+('SWE','Anna Nordqvist','F',31,'Golf'),
+('GRE','Eleftherios Petrounias','M',28,'Gymnastique'),
+('USA','Lauren Hernandez','F',18,'Gymnastique'),
+('
 
 INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
 ('Athletisme',1),
