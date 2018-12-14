@@ -107,6 +107,12 @@ INSERT INTO Athlete (iso_pays,nom,genre,age,discipline) VALUES
 ('DEU','Annekatrin Thiele','F','34','Aviron'),
 ('CHN','Pan Feihong','F',29,'Aviron'),
 ('CHN',Huang Wenyi','F',27,'Aviron'),
+('DNK','Viktor Axelsen','M',24,'Badminton'),
+('JPN','Nozomi Okuhara','F',23,'Badminton'),
+('SRB','Sasa Cado','F',29,'Basket-ball'),
+('ESP','Sergio Rodiguez',32,'Basket-ball'),
+
+
 
 
 
