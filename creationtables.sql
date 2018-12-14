@@ -78,7 +78,14 @@ heure TIME
 
 
 INSERT INTO Athlete (id_pays,nom,genre,age,discipline) VALUES
-(1,'Bob','M',38,'Athletisme');
+(1,'Bob','M',38,'Athletisme'),
+(1,'Usain Bolt,'M',32,'Athletisme'),
+(1,'Justin Gatlin','M',36,'Athletisme'),
+(1,'Andre De Grasse','M',24,'Athletisme'),
+(1,'Christophe Lemaitre','M',28,'Athletisme'),
+(1,'Wayde van Niekerk','M',26,'Athletisme'),
+(1,'Kirani James','M',26,'Athletisme'),
+(1,'LaShawn Merritt','M',32,'Athletisme'),
 
 INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
 ('Athletisme',1),
@@ -116,6 +123,7 @@ INSERT INTO Pays (nom) VALUES -- On ne prend que les pays avec 50 ou plus athlet
 ('Afrique du Sud'),
 ('Algerie'),
 ('Egypte'),
+('Jamaïque'),
 ('Kenya'),
 ('Maroc'),
 ('Nigeria'),
