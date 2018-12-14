@@ -141,7 +141,16 @@ INSERT INTO Athlete (iso_pays,nom,genre,age,discipline) VALUES
 ('FRA','Chloe Bulleux','F',27,'Handball'),
 ('FRA','Blandine Dancette','F',30,'Handball'),
 ('GER','Christian Dissinger','M',27,'Handball'),
- 
+('GBR','Beth Storry','F',40,'Hockey sur gazon'),
+('FRA','Teddy Riner','M',29,'Judo'),
+('JPN','Haruka Tachimoto','F',28,'Judo'),
+('RUS','David Chakvetadze','M',26,'Lutte'),
+('CAN','Erica Wiebe','F',29,'Lutte'),
+('USA','Michael Phelps','M',33,'Natation'),
+('FRA','Florent Manaudou','M',28,'Natation'),
+('SWE','Sarah Sjostrom','F',25,'Natation'),
+('CHN','Shi Tingmao','F',27,'Natation'),
+
 
 INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
 ('Athletisme',1),
