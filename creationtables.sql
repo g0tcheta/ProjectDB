@@ -86,6 +86,15 @@ INSERT INTO Athlete (id_pays,nom,genre,age,discipline) VALUES
 (1,'Wayde van Niekerk','M',26,'Athletisme'),
 (1,'Kirani James','M',26,'Athletisme'),
 (1,'LaShawn Merritt','M',32,'Athletisme'),
+(1,'Elaine Thompson','M',26,'Athletisme'),
+(1,'Tori Bowie','M',28,'Athletisme'),
+(1,'Shelly-Ann Fraser-Pryce','M',31,'Athletisme'),
+(1,'Dafne Schippers','M',26,'Athletisme'),
+(1,'Shaunae Miller','M',24,'Athletisme'),
+(1,'Allyson Felix','M',33,'Athletisme'),
+(1,'Shericka Jackson','M',24,'Athletisme'),
+
+
 
 INSERT INTO Categorie_Sport (nom, nbr_epreuve) VALUES
 ('Athletisme',1),
