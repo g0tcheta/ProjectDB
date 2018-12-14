@@ -180,7 +180,7 @@ INSERT INTO Pays (nom) VALUES -- On ne prend que les pays avec 50 ou plus athlet
 ('Nouvelle Zelande');
 
 
-INSERT INTO Epreuve (nom ,solo_multi,date,,categorie) VALUES --Dates pas insérées 
+INSERT INTO Epreuve (nom ,solo_multi,date,,categorie) VALUES 
 ('Athletisme','solo',2016-08-12,'Athletisme'),
 ('Athletisme','solo',2016-08-13,'Athletisme'),
 ('Athletisme','solo',2016-08-14,'Athletisme'),
