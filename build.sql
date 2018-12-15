@@ -93,8 +93,8 @@ CREATE TABLE Medaille
 
 
 INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
-(''),
-('');
+(,'','',,''),
+(,'','',,'');
 
 INSERT INTO Team (id_sport,nom,genre,pays) VALUES
 (,'','',''),
