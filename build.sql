@@ -41,8 +41,8 @@ CREATE TABLE MembreDe
   id_athlete int,
   FOREIGN KEY (id_athlete) REFERENCES Athlete(id_athlete),
   id_team int,
-  FOREIGN KEY (id_team) REFERENCES Team(id_team)
-  PRIMARY KEY (id_athlete, id_team),
+  FOREIGN KEY (id_team) REFERENCES Team(id_team),
+  PRIMARY KEY (id_athlete, id_team)
 )
 
 
