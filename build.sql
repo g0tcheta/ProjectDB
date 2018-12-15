@@ -55,15 +55,15 @@ CREATE TABLE Sport
 );
 
 
-CREATE TABLE Event
-(
-  id_event SERIAL PRIMARY KEY,
-  id_sport INT;
-  FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
-  id_particpant INT;
-  FOREIGN KEY (id_particpant) REFERENCES Athlete(id_athlete) AND Team (id_team),
-  date DATE
-);
+  CREATE TABLE Event
+  (
+    id_event SERIAL PRIMARY KEY,
+    id_sport INT;
+    FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
+    id_particpant INT;
+    FOREIGN KEY (id_particpant) REFERENCES Athlete(id_athlete) AND Team (id_team),
+    date DATE
+  );
 
 
 CREATE TABLE Resultat
