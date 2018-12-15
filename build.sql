@@ -61,8 +61,8 @@ CREATE TABLE Event
   id_sport INT;
   FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
   id_particpant INT;
-  -- id_particpant doit etre issus de id athlete et id team, trouver comment faire.
-  date DATE;
+  FOREIGN KEY (id_particpant) REFERENCES Athlete(id_athlete) AND Team (id_team),
+  date DATE
 );
 
 
