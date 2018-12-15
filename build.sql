@@ -21,8 +21,8 @@ CREATE TABLE Athlete
   id_sport INT,
   FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
   nom VARCHAR(100),
-  age INT,
   genre VARCHAR(100),
+  age INT,
   pays VARCHAR(100)
 );
 
@@ -54,8 +54,7 @@ CREATE TABLE Sport
   multi VARCHAR(100)
 );
 
-
-  CREATE TABLE Event
+CREATE TABLE Event
   (
     id_event SERIAL PRIMARY KEY,
     id_sport INT;
@@ -82,3 +81,25 @@ CREATE TABLE Medaille
   id_medaille SERIAL PRIMARY KEY,
   type VARCHAR(100)
 );
+
+
+
+-- INSERTION
+
+INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
+(''),
+('');
+
+INSERT INTO Sport (nom, categorie, multi) VALUES
+(''),
+('');
+
+INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
+(''),
+('');
+
+INSERT INTO Medaille (type) VALUES
+('NUL'),
+('BRONZE'),
+('ARGENT'),
+('OR');
