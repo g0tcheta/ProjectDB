@@ -14,7 +14,21 @@ DROP TABLE IF EXISTS Medaille CASCADE;
 
 
 -- CREATION
+CREATE TABLE Categorie
+(
+  id_categorie SERIAL PRIMARY KEY,
+  nom VARCHAR(255),
+  nbr_sport INT
+);
 
+CREATE TABLE Sport
+(
+  id_sport SERIAL PRIMARY KEY,
+  nom VARCHAR(255),
+  id_categorie INT,
+  FOREIGN KEY (id_categorie) REFERENCES Categorie(id_categorie),
+  multi VARCHAR(255)
+);
 
 CREATE TABLE Athlete
 (
@@ -34,7 +48,7 @@ CREATE TABLE Team
   FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
   nom VARCHAR(255),
   genre VARCHAR(255),
-  pays VARCHAR(255),
+  pays VARCHAR(255)
 );
 
 CREATE TABLE Membre
@@ -48,37 +62,28 @@ CREATE TABLE Membre
 
 CREATE TABLE Participant
 (
-  id_particpant SERIAL PRIMARY KEY,
+  id_participant SERIAL PRIMARY KEY,
   id_athlete int,
   FOREIGN KEY (id_athlete) REFERENCES Athlete(id_athlete),
   id_team int,
-  FOREIGN KEY (id_team) REFERENCES Team(id_team),
+  FOREIGN KEY (id_team) REFERENCES Team(id_team)
 );
 
-CREATE TABLE Categorie
-(
-  id_categorie SERIAL PRIMARY KEY,
-  nom VARCHAR(255),
-  nbr_sport INT
-);
-
-CREATE TABLE Sport
-(
-  id_sport SERIAL PRIMARY KEY,
-  nom VARCHAR(255),
-  id_categorie INT,
-  FOREIGN KEY (id_categorie) REFERENCES Categorie(id_categorie),
-  multi VARCHAR(255)
-);
 
 CREATE TABLE Event
 (
   id_event SERIAL PRIMARY KEY,
-  id_sport INT;
+  id_sport INT,
   FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
-  id_particpant INT;
-  FOREIGN KEY (id_particpant) REFERENCES ,
+  id_particpant INT,
+  FOREIGN KEY (id_participant) REFERENCES Participant(id_participant),
   date DATE
+);
+
+CREATE TABLE Medaille
+(
+  id_medaille SERIAL PRIMARY KEY,
+  type VARCHAR(255)
 );
 
 CREATE TABLE Resultat
@@ -89,7 +94,7 @@ CREATE TABLE Resultat
   id_event INT,
   FOREIGN KEY (id_event) REFERENCES Event(id_event),
   temps TIME,
-  score VARCHAR(11),
+  score VARCHAR(11)
 );
 
 CREATE TABLE Medaille
@@ -391,10 +396,10 @@ INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('Tir a larc',25,'solo'),
 ('Triathlon',26,'solo'),
 ('Voile',27,'solo'),
-('Volley-ball',28,'multi');
+('Volley-ball',28,'multi'),
 ('Beach-volley',28,'multi');
 
-INSERT INTO Event (id_sport, id_particpant, date) VALUES
+INSERT INTO Event (id_sport, id_participant, date) VALUES
 (1,1,DATE '2016-08-15'), -- temps
 (1,35,DATE '2016-08-20'), -- temps
 (1,68,DATE '2016-08-16'), -- temps
@@ -494,17 +499,17 @@ INSERT INTO Event (id_sport, id_particpant, date) VALUES
 (45,22,DATE '2016-08-10'); -- point
 
 INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
-(4,1,09:58,NULL),
-(2,2,10:19,NULL),
-(1,3,10:50,NULL),
+(4,1,'09:58',NULL),
+(2,2,'10:19',NULL),
+(1,3,'10:50',NULL),
 
-(4,4,19:19,NULL),
-(3,5,19:90,NULL),
-(1,6,20:15,NULL),
+(4,4,'19:19',NULL),
+(3,5,'19:90',NULL),
+(1,6,'20:15',NULL),
 
-(4,7,43:03,NULL),
-(3,8,43:68,NULL),
-(1,9,44:10,NULL),
+(4,7,'43:03',NULL),
+(3,8,'43:68',NULL),
+(1,9,'44:10',NULL),
 
 (3,10,NULL,'2e'),
 
@@ -515,21 +520,21 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 
 (2,14,NULL,'3e'),
 
-(2,15,40:50,NULL),
+(2,15,'40:50',NULL),
 
-(2,16,23:56,NULL),
+(2,16,'23:56',NULL),
 
-(4,17,28:42,NULL),
+(4,17,'28:42',NULL),
 
-(2,18,38:26,NULL),
+(2,18,'38:26',NULL),
 
-(4,19,32:03,NULL),
-(1,20,35:56,NULL),
+(4,19,'32:03',NULL),
+(1,20,'35:56',NULL),
 
-(2,21,15:56,NULL),
-(4,22,13:55,NULL),
+(2,21,'15:56',NULL),
+(4,22,'13:55',NULL),
 
-(4,23,45:52,NULL),
+(4,23,'45:52',NULL),
 
 (1,24,NULL,'14e'),
 (4,25,NULL,'1er'),
@@ -573,8 +578,8 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (2,51,NULL,'3e'),
 (1,52,NULL,'4e'),
 
-(4,53,34:08,NULL),
-(2,54,38:50,NULL),
+(4,53,'34:08',NULL),
+(2,54,'38:50',NULL),
 
 (4,55,NULL,'1er'),
 (4,56,NULL,'1er'),
@@ -582,10 +587,10 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (3,58,NULL,'2e'),
 (1,59,NULL,'6e'),
 
-(4,60,52:23,NULL),
-(1,61,55:25,NULL),
-(2,62,54:12,NULL),
-(1,63,58:20,NULL),
+(4,60,'52:23',NULL),
+(1,61,'55:25',NULL),
+(2,62,'54:12',NULL),
+(1,63,'58:20',NULL),
 
 (1,64,NULL,'5e'),
 (3,65,NULL,'2e'),
@@ -619,13 +624,13 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (1,84,NULL,'5e'),
 (3,85,NULL,'2e'),
 
-(2,86,48:20,NULL),
-(3,87,45:30,NULL),
-(1,88,50:40,NULL),
+(2,86,'48:20',NULL),
+(3,87,'45:30',NULL),
+(1,88,'50:40',NULL),
 
-(1,89,50:03,NULL),
-(1,90,45:45,NULL),
-(4,91,38:50,NULL),
+(1,89,'50:03',NULL),
+(1,90,'45:45',NULL),
+(4,91,'38:50',NULL),
 
 (3,92,NULL,'2e'),
 (2,93,NULL,'3e'),
