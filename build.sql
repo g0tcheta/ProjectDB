@@ -94,7 +94,9 @@ CREATE TABLE Resultat
   id_event INT,
   FOREIGN KEY (id_event) REFERENCES Event(id_event),
   temps TIME,
-  score VARCHAR(11)
+  score VARCHAR(11),
+  id_participant INT,
+  FOREIGN KEY (id_participant) REFERENCES Participant(id_participant)
 );
 
 
