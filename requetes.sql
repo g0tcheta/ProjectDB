@@ -52,11 +52,24 @@ WHERE athlete.id_sport = 28
 GROUP BY pays;
  
 --2.2
-SELECT athlete.pays ,COUNT (pays) FROM Athlete JOIN Participant ON Athlete.id_athlete = Participant.id_athlete WHERE Participant.id_athlete IN
-(SELECT Resultat.id_participant FROM Resultat JOIN Participant ON Resultat.id_participant = Participant.id_participant WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3 OR Resultat.id_medaille = 2) GROUP BY pays;
+SELECT athlete.pays ,COUNT (pays) 
+FROM Athlete JOIN Participant ON Athlete.id_athlete = Participant.id_athlete 
+WHERE Participant.id_athlete IN
+(SELECT Resultat.id_participant 
+ FROM Resultat JOIN Participant ON Resultat.id_participant = Participant.id_participant 
+ WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3 OR Resultat.id_medaille = 2) 
+ GROUP BY pays;
 
 --2.3
-SELECT athlete.nom, athlete.pays, athlete.id_sport, medaille.type FROM Athlete JOIN Participant ON Athlete.id_athlete = Participant.id_athlete JOIN Resultat ON Participant.id_participant = Resultat.id_participant JOIN Medaille ON Resultat.id_medaille = Medaille.id_medaille
+SELECT athlete.nom, athlete.pays, athlete.id_sport, medaille.type 
+FROM Athlete JOIN Participant 
+ON Athlete.id_athlete = Participant.id_athlete JOIN Resultat 
+ON Participant.id_participant = Resultat.id_participant JOIN Medaille 
+ON Resultat.id_medaille = Medaille.id_medaille
 WHERE Participant.id_athlete IN
-(SELECT Resultat.id_participant FROM Resultat JOIN Participant ON Resultat.id_participant = Participant.id_participant WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3)ORDER BY medaille.type;
+(SELECT Resultat.id_participant 
+ FROM Resultat JOIN Participant 
+ ON Resultat.id_participant = Participant.id_participant 
+ WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3)
+ ORDER BY medaille.type;
 
