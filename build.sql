@@ -398,7 +398,9 @@ INSERT INTO Participant (id_athlete, id_team) VALUES
 (94,NULL),
 (95,NULL),
 (96,1),
-(97,1);
+(97,1),
+(98,NULL),
+(99,NULL);
 
 INSERT INTO Event (id_sport, id_participant, date) VALUES
 (1,1,DATE '2016-08-15'), -- temps
