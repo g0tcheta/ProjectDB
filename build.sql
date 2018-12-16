@@ -103,7 +103,7 @@ CREATE TABLE Resultat
 -- INSERTION
 
 INSERT INTO Categorie (nom, nbr_sport) VALUES
-('Athletisme',1),
+('Athletisme',3),
 ('Aviron',1),
 ('Badminton',1),
 ('Basket-ball',1),
@@ -130,7 +130,8 @@ INSERT INTO Categorie (nom, nbr_sport) VALUES
 ('Tir a larc',1),
 ('Triathlon',1),
 ('Voile',1),
-('Volley-ball',2);
+('Volley-ball',2),
+('Marathon',1);
 
 INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('100m',1,'solo'),
@@ -178,7 +179,8 @@ INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('Triathlon',26,'solo'),
 ('Voile',27,'solo'),
 ('Volley-ball',28,'multi'),
-('Beach-volley',28,'multi');
+('Beach-volley',28,'multi'),
+('Marathon',29,'solo');
 
 INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
 (1,'Usain Bolt','M',30,'Jamaique'),
@@ -277,7 +279,9 @@ INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
 (31,'Hind Smith','F',26,'Allemagne'),
 (27,'Peter Bryan','M',21,'Allemagne'),
 (23,'Jeanne Smirnov','F',33,'Allemagne'),
-(23,'Lea Murphy','F',29,'Allemagne');
+(23,'Lea Murphy','F',29,'Allemagne'),
+(47,'Gandoulf Mariachi','M',35,'Allemagne'),
+(47,'Tiger Weed','M',27,'Japon');
 
 INSERT INTO Team (id_sport,nom,genre,pays) VALUES
 (23,'DEU','F','Allemagne'),
@@ -493,7 +497,9 @@ INSERT INTO Event (id_sport, id_participant, date) VALUES
 (44,41,DATE '2016-08-11'), -- point
 (44,51,DATE '2016-08-18'), -- point
 (45,32,DATE '2016-08-11'), -- point
-(45,22,DATE '2016-08-10'); -- point
+(45,22,DATE '2016-08-10'), -- point
+(46,98,DATE '2016-08-12'),--temps
+(46,99,DATE '2016-08-12');--temps
 
 INSERT INTO Medaille (type) VALUES
 ('Rien'),
@@ -536,6 +542,7 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 
 (2,21,'00:15:56',NULL),
 (4,22,'00:13:55',NULL),
+
 
 (4,23,'00:45:52',NULL),
 
@@ -642,5 +649,7 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (1,95,NULL,'5e'),
 
 (3,96,NULL,'2e'),
-(2,97,NULL,'3e');
+(2,97,NULL,'3e'),
 
+(4,98,'02:21:46',NULL),
+(3,99,'02:35:12',NULL);
