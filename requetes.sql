@@ -74,7 +74,16 @@ WHERE Participant.id_athlete IN
  ORDER BY medaille.type;
 
 --2.4
-
+SELECT athlete.nom 
+FROM Athlete JOIN Participant 
+ON Athlete.id_athlete = Participant.id_athlete JOIN Resultat 
+ON Participant.id_participant = Resultat.id_participant
+WHERE Participant.id_athlete NOT IN
+(SELECT Resultat.id_participant 
+ FROM Resultat JOIN Participant 
+ ON Resultat.id_participant = Participant.id_participant 
+ WHERE Resultat.id_medaille = 4);
+ 
 --2.5
 
 --2.6
