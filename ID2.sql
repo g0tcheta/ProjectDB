@@ -26,7 +26,7 @@
 ('Judo','Judo','solo'),
 ('Lutte','Lutte','solo'),
 ('200m','Natation','solo'),
-('Plongeon','Natation','solo'),
+('Plongeon','Natation','multi'),
 ('Pentathlon moderne','Pentathlon moderne','solo'),
 ('Rugby a sept','Rugby a sept','multi'),
 ('Taekwondo','Taekwondo','solo'),
