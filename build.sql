@@ -573,10 +573,11 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (3,38,NULL,'2e'),
 (4,39,NULL,'1er'),
 
-(3,40,NULL,'2e'),
-(1,41,NULL,'2e'),
-(3,42,NULL,'2e'),
+(2,40,NULL,'2e'),
+(2,41,NULL,'2e'),
+(2,42,NULL,'2e'),
 (2,43,NULL,'2e'),
+
 (3,44,NULL,'3e'),
 
 (3,45,NULL,'2e'),
@@ -595,13 +596,16 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 
 (4,55,NULL,'1er'),
 (4,56,NULL,'1er'),
+
 (1,57,NULL,'4e'),
 (3,58,NULL,'2e'),
 (1,59,NULL,'6e'),
 
 (4,60,'00:52:23',NULL),
-(1,61,'00:55:25',NULL),
-(2,62,'00:54:12',NULL),
+
+(3,61,NULL,2e),
+(3,62,NULL,2e),
+
 (1,63,'00:58:20',NULL),
 
 (1,64,NULL,'5e'),
@@ -651,7 +655,7 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (1,95,NULL,'5e'),
 
 (3,96,NULL,'2e'),
-(2,97,NULL,'3e'),
+(3,97,NULL,'2e'),
 
 (4,98,'02:21:46',NULL),
 (3,99,'02:35:12',NULL);
