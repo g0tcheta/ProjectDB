@@ -57,7 +57,7 @@ FROM Athlete JOIN Participant ON Athlete.id_athlete = Participant.id_athlete
 WHERE Participant.id_athlete IN
 (SELECT Resultat.id_participant 
  FROM Resultat JOIN Participant ON Resultat.id_participant = Participant.id_participant 
- WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3 OR Resultat.id_medaille = 2) 
+ WHERE Resultat.id_medaille != 1) 
  GROUP BY pays;
 
 --2.3
@@ -91,6 +91,18 @@ WHERE Participant.id_athlete NOT IN
 --3.2
 
 --3.4
-
+SELECT COUNT (athlete.nom)*100/
+(SELECT COUNT (id_medaille) 
+ FROM Resultat 
+ WHERE id_medaille != 1) 
+ FROM Athlete JOIN Participant 
+ ON Athlete.id_athlete = Participant.id_athlete JOIN Resultat 
+ ON Participant.id_participant = Resultat.id_participant
+WHERE Participant.id_athlete IN
+(SELECT Resultat.id_participant 
+ FROM Resultat JOIN Participant 
+ ON Resultat.id_participant = Participant.id_participant 
+ WHERE Resultat.id_medaille != 1) AND athlete.genre = 'F';
+ 
 --3.6
 
