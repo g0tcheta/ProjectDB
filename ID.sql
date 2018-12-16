@@ -1,97 +1,141 @@
-(1,'Usain Bolt','M',30,'Jamaique'),
-(2,'Usain Bolt','M',30,'Jamaique'),
-(42,'Laure Gonzalez','F',21,'France'),
-(20,'Nemo Zhang','M',23,'France'),
-(25,'Aldana Smith','M',35,'France'),
-(6,'Jeanne Berger','F',20,'France'),
-(3,'Laure Dupont','F',27,'France'),
-(26,'Julien Perez','M',22,'France'),
-(28,'Michael Phelps','M',33,'Etats-Unis'),
-(42,'Nemo Silva','M',29,'Etats-Unis'),
-(30,'Julien Roosvelt','M',22,'Etats-Unis'),
-(8,'Peter Bryan','M',24,'Etats-Unis'),
-(29,'Eva Bryan','F',35,'Etats-Unis'),
-(22,'Marie Garcia','F',35,'Etats-Unis'),
-(39,'Jeanne Bryan','F',29,'Grande-Bretagne'),
-(26,'Peter Berger','M',20,'Grande-Bretagne'),
-(43,'Marie Lebron','F',30,'Grande-Bretagne'),
-(7,'Julie Hernandez','F',30,'Grande-Bretagne'),
-(42,'Peter Dupont','M',28,'Grande-Bretagne'),
-(25,'Lee Garcia','M',20,'Grande-Bretagne'),
-(15,'Ariana Silva','F',31,'Afrique du Sud'),
-(45,'Aldana Perez','M',27,'Afrique du Sud'),
-(38,'Brigitte Dupont','F',31,'Afrique du Sud'),
-(12,'Morena Simpson','F',21,'Afrique du Sud'),
-(10,'Marie Nguyen','F',35,'Afrique du Sud'),
-(19,'Julie Roosvelt','F',24,'Afrique du Sud'),
-(40,'James Hernandez','M',32,'Australie'),
-(15,'Marie Hernandez','F',33,'Australie'),
-(19,'Hind Dupont','F',24,'Australie'),
-(26,'James Berger','M',35,'Australie'),
-(21,'Lee Hernandez','M',27,'Australie'),
-(45,'Thomas Dupont','M',34,'Australie'),
-(9,'Julie Silva','F',28,'Chine'),
-(27,'Fred Silva','M',21,'Chine'),
-(1,'Aldana Dupont','M',35,'Chine'),
-(11,'Arthur Dupont','M',22,'Chine'),
-(35,'Morena Dupont','F',35,'Chine'),
-(37,'Bruce Hernandez','M',32,'Chine'),
-(36,'Nemo Lebron','M',23,'Russie'),
-(16,'Will Dupont','M',28,'Russie'),
-(44,'Marie Perez','F',21,'Russie'),
-(3,'Aldana Muller','M',22,'Russie'),
-(43,'James Zhang','M',21,'Russie'),
-(13,'Donald Perez','M',26,'Russie'),
-(23,'Leana Garcia','F',22,'Corée du Sud'),
-(40,'Arthur Nguyen','M',24,'Corée du Sud'),
-(36,'Arthur Dupont','M',20,'Corée du Sud'),
-(41,'Hind Murphy','F',26,'Corée du Sud'),
-(21,'Eva Simpson','F',32,'Corée du Sud'),
-(3,'Bruce Simpson','M',32,'Corée du Sud'),
-(44,'Arthur Smirnov','M',30,'Italie'),
-(35,'Bruce Perez','M',32,'Italie'),
-(33,'Will Zhang','M',35,'Italie'),
-(24,'Kobe Berger','M',20,'Italie'),
-(29,'Thomas Murphy','M',32,'Italie'),
-(29,'Julien Smith','M',24,'Italie'),
-(39,'Morena Murphy','F',22,'Pays-Bas'),
-(24,'Laure Garcia','F',22,'Pays-Bas'),
-(24,'Lea Dupont','F',29,'Pays-Bas'),
-(24,'Lin Simpson','F',35,'Pays-Bas'),
-(24,'Ariana Dupont','F',23,'Pays-Bas'),
-(30,'Bruce Smirnov','M',32,'Pays-Bas'),
-(17,'Thomas Roosvelt','M',35,'Hongrie'),
-(27,'James Muller','M',25,'Hongrie'),
-(37,'Sabine Zhang','F',25,'Hongrie'),
-(34,'Donald Silva','M',33,'Hongrie'),
-(12,'Laure Simpson','F',24,'Hongrie'),
-(1,'Nemo Roosvelt','M',23,'Hongrie'),
-(4,'Kobe Hernandez','M',35,'Bresil'),
-(13,'Aldana Hernandez','M',30,'Bresil'),
-(40,'Lee Roosvelt','M',31,'Bresil'),
-(35,'Marie Smirnov','F',27,'Bresil'),
-(29,'Nemo Simpson','M',32,'Bresil'),
-(34,'Arthur Perez','M',32,'Bresil'),
-(41,'Kobe Garcia','M',22,'Espagne'),
-(5,'Jeanne Hernandez','F',26,'Espagne'),
-(30,'James Nguyen','M',25,'Espagne'),
-(30,'Will Muller','M',30,'Espagne'),
-(14,'Thomas Silva','M',31,'Espagne'),
-(2,'Julien Muller','M',25,'Espagne'),
-(32,'James Roosvelt','M',27,'Inde'),
-(2,'Arthur Silva','M',23,'Inde'),
-(28,'Sabine Perez','F',29,'Inde'),
-(38,'James Berger','M',23,'Inde'),
-(29,'Julien Nguyen','M',23,'Inde'),
-(18,'Thomas Perez','M',35,'Inde'),
-(38,'Hind Hernandez','F',30,'Japon'),
-(17,'James Garcia','M',31,'Japon'),
-(2,'Hind Bryan','F',29,'Japon'),
-(41,'Peter Dupont','M',22,'Japon'),
-(33,'Leana Gonzalez','F',24,'Japon'),
-(31,'Julien Silva','M',27,'Japon'),
-(21,'Eva Perez','F',23,'Allemagne'),
-(31,'Hind Smith','F',26,'Allemagne'),
-(27,'Peter Bryan','M',21,'Allemagne'),
-(23,'Jeanne Smirnov','F',33,'Allemagne'),
-(23,'Lea Murphy','F',29,'Allemagne');
+(1,1,DATE '2016-08-15'), -- temps
+(1,35,DATE '2016-08-20'), -- temps
+(1,68,DATE '2016-08-16'), -- temps
+
+(2,89,DATE '2016-08-18'), -- temps
+(2,82,DATE '2016-08-12'), -- temps
+(2,80,DATE '2016-08-14'), -- temps
+
+(3,7,DATE '2016-08-13'), -- temps
+(3,42,DATE '2016-08-10'), -- temps
+(3,50,DATE '2016-08-21'), -- temps
+
+(4,69,DATE '2016-08-14'), -- temps
+
+(5,76,DATE '2016-08-18'), -- point
+(5,76,DATE '2016-08-9'), -- point
+
+(6,6,DATE '2016-08-12'), -- point
+
+(7,18,DATE '2016-08-12'), -- point
+
+(8,12,DATE '2016-08-11'), -- temps
+
+(9,33,DATE '2016-08-7'), -- temps
+
+(10,25,DATE '2016-08-6'), -- temps
+
+(11,36,DATE '2016-08-19'), -- temps
+
+(12,24,DATE '2016-08-7'), -- temps
+(12,67,DATE '2016-08-11'), -- temps
+
+(13,44,DATE '2016-08-8'), -- temps
+(13,70,DATE '2016-08-10'), -- temps
+
+(14,79,DATE '2016-08-19'), -- temps
+
+(15,21,DATE '2016-08-20'), -- point
+(15,28,DATE '2016-08-8'), -- point
+
+(16,40,DATE '2016-08-12'), -- point
+
+(17,63,DATE '2016-08-21'), -- point
+(17,88,DATE '2016-08-12'), -- point
+
+(18,86,DATE '2016-08-12'), -- point
+
+(19,26,DATE '2016-08-19'), -- point
+(19,29,DATE '2016-08-15'), -- point
+
+(20,4,DATE '2016-08-16'), -- point
+
+(21,31,DATE '2016-08-11'), -- point
+(21,49,DATE '2016-08-14'), -- point
+(21,93,DATE '2016-08-9'), -- point
+
+(22,14,DATE '2016-08-13'), -- point
+
+(23,45,DATE '2016-08-20'), -- point
+(23,96,DATE '2016-08-6'), -- point
+(23,97,DATE '2016-08-18'), -- point
+
+(24,58,DATE '2016-08-17'), -- point
+(24,59,DATE '2016-08-17'), -- point
+(24,60,DATE '2016-08-16'), -- point
+(24,61,DATE '2016-08-16'), -- point
+(24,54,DATE '2016-08-15'), -- point
+
+(25,5,DATE '2016-08-21'), -- point
+(25,20,DATE '2016-08-8'), -- point
+
+(26,8,DATE '2016-08-7'), -- point
+(26,16,DATE '2016-08-11'), -- point
+(26,30,DATE '2016-08-9'), -- point
+
+(27,64,DATE '2016-08-10'), -- point
+(27,95,DATE '2016-08-6'), -- point
+(27,34,DATE '2016-08-21'), -- point
+
+(28,9,DATE '2016-08-6'), -- temps
+(28,83,DATE '2016-08-9'), -- temps
+
+(29,55,DATE '2016-08-14'), -- point
+(29,56,DATE '2016-08-15'), -- point
+(29,73,DATE '2016-08-15'), -- point
+(29,85,DATE '2016-08-8'), -- point
+(29,13,DATE '2016-08-9'), -- point
+
+(30,62,DATE '2016-08-8'), -- temps
+(30,77,DATE '2016-08-20'), -- temps
+(30,78,DATE '2016-08-20'), -- temps
+(30,11,DATE '2016-08-8'), -- temps
+
+(31,92,DATE '2016-08-9'), -- point
+(31,94,DATE '2016-08-10'), -- point
+
+(32,81,DATE '2016-08-15'), -- point
+
+(33,91,DATE '2016-08-6'), -- point
+(33,53,DATE '2016-08-7'), -- point
+
+(34,66,DATE '2016-08-13'), -- point
+(34,74,DATE '2016-08-11'), -- point
+
+(35,72,DATE '2016-08-16'), -- point
+(35,37,DATE '2016-08-8'), -- point
+(35,52,DATE '2016-08-19'), -- point
+
+(36,39,DATE '2016-08-9'), -- point
+(36,47,DATE '2016-08-15'), -- point
+
+(37,38,DATE '2016-08-13'), -- point
+(37,65,DATE '2016-08-13'), -- point
+
+(38,84,DATE '2016-08-17'), -- point
+(38,87,DATE '2016-08-21'), -- point
+(38,23,DATE '2016-08-17'), -- point
+
+(39,15,DATE '2016-08-7'), -- point
+(39,57,DATE '2016-08-10'), -- point
+
+(40,71,DATE '2016-08-9'), -- point
+(40,27,DATE '2016-08-16'), -- point
+(40,46,DATE '2016-08-13'), -- point
+
+(41,48,DATE '2016-08-14'), -- temps
+(41,75,DATE '2016-08-12'), -- temps
+(41,90,DATE '2016-08-14'), -- temps
+
+(42,3,DATE '2016-08-13'), -- temps
+(42,10,DATE '2016-08-21'), -- temps
+(42,19,DATE '2016-08-16'), -- temps
+
+(43,17,DATE '2016-08-10'), -- point
+(43,43,DATE '2016-08-19'), -- point
+
+(44,41,DATE '2016-08-11'), -- point
+(44,51,DATE '2016-08-18'), -- point
+
+(45,32,DATE '2016-08-11'), -- point
+(45,22,DATE '2016-08-10'); -- point
