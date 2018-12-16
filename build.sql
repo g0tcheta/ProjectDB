@@ -75,7 +75,7 @@ CREATE TABLE Event
   id_event SERIAL PRIMARY KEY,
   id_sport INT,
   FOREIGN KEY (id_sport) REFERENCES Sport(id_sport),
-  id_particpant INT,
+  id_participant INT,
   FOREIGN KEY (id_participant) REFERENCES Participant(id_participant),
   date DATE
 );
@@ -97,15 +97,88 @@ CREATE TABLE Resultat
   score VARCHAR(11)
 );
 
-CREATE TABLE Medaille
-(
-  id_medaille SERIAL PRIMARY KEY,
-  type VARCHAR(255)
-);
+
 
 
 -- INSERTION
 
+INSERT INTO Categorie (nom, nbr_sport) VALUES
+('Athletisme',1),
+('Aviron',1),
+('Badminton',1),
+('Basket-ball',1),
+('Boxe',1),
+('Canoe-kayak',2),
+('Cyclisme',4),
+('Equitation',3),
+('Escrime',1),
+('Football',1),
+('Golf',1),
+('Gymnastique',3),
+('Halterophilie',1),
+('Handball',1),
+('Hockey sur gazon',1),
+('Judo',1),
+('Lutte',2),
+('Sports aquatique',4),
+('Pentathlon moderne',1),
+('Rugby a sept',1),
+('Taekwondo',1),
+('Tennis',1),
+('Tennis de table',1),
+('Tir',3),
+('Tir a larc',1),
+('Triathlon',1),
+('Voile',1),
+('Volley-ball',2);
+
+INSERT INTO Sport (nom, id_categorie, multi) VALUES
+('100m',1,'solo'),
+('200m',1,'solo'),
+('400m',1,'solo'),
+('Aviron',2,'multi'),
+('Badminton',3,'multi'),
+('Basket-ball',4,'multi'),
+('Boxe',5,'solo'),
+('Canoe-kayak course',6,'multi'),
+('Canoe-kayak slalom',6,'solo'),
+('Cyclisme',7,'solo'),
+('Cyclisme VTT',7,'solo'),
+('Cyclisme BMX',7,'solo'),
+('Cyclisme Piste',7,'solo'),
+('Equitation Saut',8,'solo'),
+('Equitation Dressage',8,'solo'),
+('Equitation Concours',8,'solo'),
+('Escrime',9,'solo'),
+('Football',10,'multi'),
+('Golf',11,'solo'),
+('Gymnastique artistique',12,'solo'),
+('Gymnastique trampoline',12,'solo'),
+('Gymnastique rythmique',12,'solo'),
+('Halterophilie',13,'solo'),
+('Handball',14,'multi'),
+('Hockey sur gazon',15,'multi'),
+('Judo',16,'solo'),
+('Lutte',17,'solo'),
+('200m',18,'solo'),
+('400m',18,'solo'),
+('Plongeon',18,'solo'),
+('Nage Synchronisée',18,'multi'),
+('Pentathlon moderne',19,'solo'),
+('Rugby a sept',20,'multi'),
+('Taekwondo',21,'solo'),
+('Tennis',22,'solo'),
+('Tennis equipe',22,'multi'),
+('Tennis de table',23,'solo'),
+('Tennis de table equipe',23,'multi'),
+('Tir',24,'solo'),
+('Carabine',24,'solo'),
+('Pistolet',24,'solo'),
+('Tir a larc',25,'solo'),
+('Triathlon',26,'solo'),
+('Voile',27,'solo'),
+('Volley-ball',28,'multi'),
+('Beach-volley',28,'multi');
 
 INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
 (1,'Usain Bolt','M',30,'Jamaique'),
@@ -323,82 +396,6 @@ INSERT INTO Participant (id_athlete, id_team) VALUES
 (96,1),
 (97,1);
 
-INSERT INTO Categorie (nom, nbr_sport) VALUES
-('Athletisme',1),
-('Aviron',1),
-('Badminton',1),
-('Basket-ball',1),
-('Boxe',1),
-('Canoe-kayak',2),
-('Cyclisme',4),
-('Equitation',3),
-('Escrime',1),
-('Football',1),
-('Golf',1),
-('Gymnastique',3),
-('Halterophilie',1),
-('Handball',1),
-('Hockey sur gazon',1),
-('Judo',1),
-('Lutte',2),
-('Sports aquatique',4),
-('Pentathlon moderne',1),
-('Rugby a sept',1),
-('Taekwondo',1),
-('Tennis',1),
-('Tennis de table',1),
-('Tir',3),
-('Tir a larc',1),
-('Triathlon',1),
-('Voile',1),
-('Volley-ball',2);
-
-INSERT INTO Sport (nom, id_categorie, multi) VALUES
-('100m',1,'solo'),
-('200m',1,'solo'),
-('400m',1,'solo'),
-('Aviron',2,'multi'),
-('Badminton',3,'multi'),
-('Basket-ball',4,'multi'),
-('Boxe',5,'solo'),
-('Canoe-kayak course',6,'multi'),
-('Canoe-kayak slalom',6,'solo'),
-('Cyclisme',7,'solo'),
-('Cyclisme VTT',7,'solo'),
-('Cyclisme BMX',7,'solo'),
-('Cyclisme Piste',7,'solo'),
-('Equitation Saut',8,'solo'),
-('Equitation Dressage',8,'solo'),
-('Equitation Concours',8,'solo'),
-('Escrime',9,'solo'),
-('Football',10,'multi'),
-('Golf',11,'solo'),
-('Gymnastique artistique',12,'solo'),
-('Gymnastique trampoline',12,'solo'),
-('Gymnastique rythmique',12,'solo'),
-('Halterophilie',13,'solo'),
-('Handball',14,'multi'),
-('Hockey sur gazon',15,'multi'),
-('Judo',16,'solo'),
-('Lutte',17,'solo'),
-('200m',18,'solo'),
-('Plongeon',18,'solo'),
-('Pentathlon moderne',19,'solo'),
-('Rugby a sept',20,'multi'),
-('Taekwondo',21,'solo'),
-('Tennis',22,'solo'),
-('Tennis equipe',22,'multi'),
-('Tennis de table',23,'solo'),
-('Tennis de table equipe',23,'multi'),
-('Tir',24,'solo'),
-('Carabine',24,'solo'),
-('Pistolet',24,'solo'),
-('Tir a larc',25,'solo'),
-('Triathlon',26,'solo'),
-('Voile',27,'solo'),
-('Volley-ball',28,'multi'),
-('Beach-volley',28,'multi');
-
 INSERT INTO Event (id_sport, id_participant, date) VALUES
 (1,1,DATE '2016-08-15'), -- temps
 (1,35,DATE '2016-08-20'), -- temps
@@ -498,18 +495,24 @@ INSERT INTO Event (id_sport, id_participant, date) VALUES
 (45,32,DATE '2016-08-11'), -- point
 (45,22,DATE '2016-08-10'); -- point
 
+INSERT INTO Medaille (type) VALUES
+('Rien'),
+('Bronze'),
+('Argent'),
+('Or');
+
 INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
-(4,1,'09:58',NULL),
-(2,2,'10:19',NULL),
-(1,3,'10:50',NULL),
+(4,1,'00:09:58',NULL),
+(2,2,'00:10:19',NULL),
+(1,3,'00:10:50',NULL),
 
-(4,4,'19:19',NULL),
-(3,5,'19:90',NULL),
-(1,6,'20:15',NULL),
+(4,4,'00:19:19',NULL),
+(3,5,'00:19:45',NULL),
+(1,6,'00:20:15',NULL),
 
-(4,7,'43:03',NULL),
-(3,8,'43:68',NULL),
-(1,9,'44:10',NULL),
+(4,7,'00:43:03',NULL),
+(3,8,'00:43:00',NULL),
+(1,9,'00:44:10',NULL),
 
 (3,10,NULL,'2e'),
 
@@ -520,21 +523,21 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 
 (2,14,NULL,'3e'),
 
-(2,15,'40:50',NULL),
+(2,15,'00:40:50',NULL),
 
-(2,16,'23:56',NULL),
+(2,16,'00:23:56',NULL),
 
-(4,17,'28:42',NULL),
+(4,17,'00:28:42',NULL),
 
-(2,18,'38:26',NULL),
+(2,18,'00:38:26',NULL),
 
-(4,19,'32:03',NULL),
-(1,20,'35:56',NULL),
+(4,19,'00:32:03',NULL),
+(1,20,'00:35:56',NULL),
 
-(2,21,'15:56',NULL),
-(4,22,'13:55',NULL),
+(2,21,'00:15:56',NULL),
+(4,22,'00:13:55',NULL),
 
-(4,23,'45:52',NULL),
+(4,23,'00:45:52',NULL),
 
 (1,24,NULL,'14e'),
 (4,25,NULL,'1er'),
@@ -578,8 +581,8 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (2,51,NULL,'3e'),
 (1,52,NULL,'4e'),
 
-(4,53,'34:08',NULL),
-(2,54,'38:50',NULL),
+(4,53,'00:34:08',NULL),
+(2,54,'00:38:50',NULL),
 
 (4,55,NULL,'1er'),
 (4,56,NULL,'1er'),
@@ -587,10 +590,10 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (3,58,NULL,'2e'),
 (1,59,NULL,'6e'),
 
-(4,60,'52:23',NULL),
-(1,61,'55:25',NULL),
-(2,62,'54:12',NULL),
-(1,63,'58:20',NULL),
+(4,60,'00:52:23',NULL),
+(1,61,'00:55:25',NULL),
+(2,62,'00:54:12',NULL),
+(1,63,'00:58:20',NULL),
 
 (1,64,NULL,'5e'),
 (3,65,NULL,'2e'),
@@ -624,13 +627,13 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (1,84,NULL,'5e'),
 (3,85,NULL,'2e'),
 
-(2,86,'48:20',NULL),
-(3,87,'45:30',NULL),
-(1,88,'50:40',NULL),
+(2,86,'00:48:20',NULL),
+(3,87,'00:45:30',NULL),
+(1,88,'00:50:40',NULL),
 
-(1,89,'50:03',NULL),
-(1,90,'45:45',NULL),
-(4,91,'38:50',NULL),
+(1,89,'00:50:03',NULL),
+(1,90,'00:45:45',NULL),
+(4,91,'00:38:50',NULL),
 
 (3,92,NULL,'2e'),
 (2,93,NULL,'3e'),
@@ -641,8 +644,3 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (3,96,NULL,'2e'),
 (2,97,NULL,'3e');
 
-INSERT INTO Medaille (type) VALUES
-('Rien'),
-('Bronze'),
-('Argent'),
-('Or');
