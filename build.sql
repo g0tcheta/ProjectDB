@@ -103,7 +103,7 @@ CREATE TABLE Resultat
 -- INSERTION
 
 INSERT INTO Categorie (nom, nbr_sport) VALUES
-('Athletisme',1),
+('Athletisme',3),
 ('Aviron',1),
 ('Badminton',1),
 ('Basket-ball',1),
@@ -130,7 +130,8 @@ INSERT INTO Categorie (nom, nbr_sport) VALUES
 ('Tir a larc',1),
 ('Triathlon',1),
 ('Voile',1),
-('Volley-ball',2);
+('Volley-ball',2),
+('Marathon',1);
 
 INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('100m',1,'solo'),
@@ -160,8 +161,8 @@ INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('Hockey sur gazon',15,'multi'),
 ('Judo',16,'solo'),
 ('Lutte',17,'solo'),
-('200m',18,'solo'),
-('400m',18,'solo'),
+('200m nage libre',18,'solo'),
+('400m nage libre',18,'solo'),
 ('Plongeon',18,'solo'),
 ('Nage Synchronisée',18,'multi'),
 ('Pentathlon moderne',19,'solo'),
@@ -178,7 +179,8 @@ INSERT INTO Sport (nom, id_categorie, multi) VALUES
 ('Triathlon',26,'solo'),
 ('Voile',27,'solo'),
 ('Volley-ball',28,'multi'),
-('Beach-volley',28,'multi');
+('Beach-volley',28,'multi'),
+('Marathon',29,'solo');
 
 INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
 (1,'Usain Bolt','M',30,'Jamaique'),
@@ -277,7 +279,9 @@ INSERT INTO Athlete (id_sport,nom,genre,age,pays) VALUES
 (31,'Hind Smith','F',26,'Allemagne'),
 (27,'Peter Bryan','M',21,'Allemagne'),
 (23,'Jeanne Smirnov','F',33,'Allemagne'),
-(23,'Lea Murphy','F',29,'Allemagne');
+(23,'Lea Murphy','F',29,'Allemagne'),
+(47,'Gandoulf Mariachi','M',35,'Allemagne'),
+(47,'Tiger Weed','M',27,'Japon');
 
 INSERT INTO Team (id_sport,nom,genre,pays) VALUES
 (23,'DEU','F','Allemagne'),
@@ -394,7 +398,9 @@ INSERT INTO Participant (id_athlete, id_team) VALUES
 (94,NULL),
 (95,NULL),
 (96,1),
-(97,1);
+(97,1),
+(98,NULL),
+(99,NULL);
 
 INSERT INTO Event (id_sport, id_participant, date) VALUES
 (1,1,DATE '2016-08-15'), -- temps
@@ -493,7 +499,9 @@ INSERT INTO Event (id_sport, id_participant, date) VALUES
 (44,41,DATE '2016-08-11'), -- point
 (44,51,DATE '2016-08-18'), -- point
 (45,32,DATE '2016-08-11'), -- point
-(45,22,DATE '2016-08-10'); -- point
+(45,22,DATE '2016-08-10'), -- point
+(46,98,DATE '2016-08-12'),--temps
+(46,99,DATE '2016-08-12');--temps
 
 INSERT INTO Medaille (type) VALUES
 ('Rien'),
@@ -537,6 +545,7 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (2,21,'00:15:56',NULL),
 (4,22,'00:13:55',NULL),
 
+
 (4,23,'00:45:52',NULL),
 
 (1,24,NULL,'14e'),
@@ -564,10 +573,11 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (3,38,NULL,'2e'),
 (4,39,NULL,'1er'),
 
-(3,40,NULL,'2e'),
-(1,41,NULL,'2e'),
-(3,42,NULL,'2e'),
+(2,40,NULL,'2e'),
+(2,41,NULL,'2e'),
+(2,42,NULL,'2e'),
 (2,43,NULL,'2e'),
+
 (3,44,NULL,'3e'),
 
 (3,45,NULL,'2e'),
@@ -586,13 +596,16 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 
 (4,55,NULL,'1er'),
 (4,56,NULL,'1er'),
+
 (1,57,NULL,'4e'),
 (3,58,NULL,'2e'),
 (1,59,NULL,'6e'),
 
 (4,60,'00:52:23',NULL),
-(1,61,'00:55:25',NULL),
-(2,62,'00:54:12',NULL),
+
+(3,61,NULL,2e),
+(3,62,NULL,2e),
+
 (1,63,'00:58:20',NULL),
 
 (1,64,NULL,'5e'),
@@ -642,5 +655,7 @@ INSERT INTO Resultat (id_medaille, id_event, temps, score) VALUES
 (1,95,NULL,'5e'),
 
 (3,96,NULL,'2e'),
-(2,97,NULL,'3e');
+(3,97,NULL,'2e'),
 
+(4,98,'02:21:46',NULL),
+(3,99,'02:35:12',NULL);
