@@ -73,3 +73,15 @@ WHERE Participant.id_athlete IN
  WHERE Resultat.id_medaille = 4 OR Resultat.id_medaille = 3)
  ORDER BY medaille.type;
 
+--2.4
+
+--2.5
+
+--2.6
+
+--3.2
+
+--3.4
+
+--3.6
+
